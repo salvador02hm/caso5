@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="imagenes/isil+.png" alt="logo" height="50"></img>
+        </header>
+        <h1>Pseudocódigo con estructuras condicionales anidadas</h1>
+            <div id="Caso">
+                <img src="imagenes/caso5.png" alt="caso5">
+            </div>
+            <div id="solucion">
+                <script>
+                    //Declaracion de varialbles
+                    var edad,nivel,anemia;
+
+                    //Fase de lectura 
+                    nivel=parseInt(prompt("Ingrese el nivel de hemoglobina"));
+                    edad=parseInt(prompt("Ingrese la edad en meses"));
+
+                    //Fase de procesamiento de datos
+                    if (edad>0 && edad<=1 && nivel<13) {
+                        anemia="Positivo";
+                    } else {
+                        if (edad>1 && edad<=6 && nivel<10) {
+                            anemia="Positivo";
+                        } else {
+                            if (edad>6 && edad<=12 && nivel<11) {
+                               anemia="Positivo"; 
+                            } else {
+                                if (edad>12 && edad<=60 && nivel<11.5) {
+                                    anemia="Positivo";
+                                } else {
+                                    if (edad>60 && edad<=120 && nivel<12.6) {
+                                        anemia="Positivo";
+                                    } else {
+                                        if (edad>120 && edad<=180 && nivel<13) {
+                                            anemia="Positivo";
+                                        } else {
+                                            anemia="Negativo";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //Fase de salida
+                    document.write("Tu edad en meses es: "+edad+"<br>");
+                    document.write("Tu nivel de hemoglobina es: %"+nivel+"<br>");
+                    document.write("Tu resultado es: "+anemia);
+
+                </script>
+            </div>
+     </main>
+    
+</body>
+</html>
